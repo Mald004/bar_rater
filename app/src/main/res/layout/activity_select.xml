@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewActivity">
+
+    <Button
+        android:id="@+id/makeReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send review"
+        android:onClick="sendData"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Parameter" />
+
+            <TextView
+                android:id="@+id/vurdering"
+                style="@style/columnsView"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Indsæt vurdering" />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Navn:" />
+
+            <EditText
+                android:id="@+id/navn"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="Indtast navn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="addrese:" />
+
+            <EditText
+                android:id="@+id/addrese"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="Indtast addresse"
+                 />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Crowded:"
+                />
+
+            <EditText
+                android:id="@+id/crowd"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                 />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Hyggelig:"
+                />
+
+            <EditText
+                android:id="@+id/hygge"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Lokation:"
+                />
+
+            <EditText
+                android:id="@+id/lokation"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Nemt at få plads:"
+                />
+
+            <EditText
+                android:id="@+id/plads"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Musik:"
+                />
+
+            <EditText
+                android:id="@+id/musik"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Alders gennemsnit:"
+                />
+
+            <EditText
+                android:id="@+id/alder"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="cirka alder i år"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Kan se sport:"
+                />
+
+            <EditText
+                android:id="@+id/seSport"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="spil fx. billiard"
+                />
+
+            <EditText
+                android:id="@+id/spil"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Varianter af øl:"
+                />
+
+            <EditText
+                android:id="@+id/ølVarianter"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Charme:"
+                />
+
+            <EditText
+                android:id="@+id/charme"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Typer:"
+                />
+
+            <EditText
+                android:id="@+id/typer"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="1-5"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Pris øl:"
+                />
+
+            <EditText
+                android:id="@+id/ølPris"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="i kr"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Pris shots:"
+                />
+
+            <EditText
+                android:id="@+id/shotPris"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="i kr"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="323dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                style="@style/columnsView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Pris drinks:"
+                />
+
+            <EditText
+                android:id="@+id/drinksPris"
+                style="@style/columnsEdit"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="i kr"
+                />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
