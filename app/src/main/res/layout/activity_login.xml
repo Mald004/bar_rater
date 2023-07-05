@@ -8,54 +8,106 @@ tools:context=".Login">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/parameters_field"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opret">
 
 
-        <Button
-            android:id="@+id/signup_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Opret bruger"
-            android:onClick="showSignup"/>
-
-        <LinearLayout
-            android:id="@+id/parameters_field"
+        <EditText
+            android:id="@+id/username_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:hint="Navn" />
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kodeord"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/age_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alder" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opret"
+            android:onClick="signup"
+            ></Button>
 
 
-            <EditText
-                android:id="@+id/username_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Navn" />
-
-
-            <EditText
-                android:id="@+id/password_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Kodeord"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/age_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Alder"
-                 />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Opret"
-                android:onClick="signup"
-                ></Button>
-
-        </LinearLayout>
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/login_field"
+        android:layout_width="157dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login">
+
+
+        <EditText
+            android:id="@+id/usernameL_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Navn" />
+
+        <EditText
+            android:id="@+id/passwordL_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kodeord"
+            android:inputType="textPassword" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="login"
+            android:text="Login"></Button>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/opret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showSignup"
+        android:text="Opret bruger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323"
+        tools:ignore="MissingConstraints"></Button>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="130dp"
+        android:layout_height="52dp"
+        android:onClick="showLogin"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toEndOf="@+id/opret"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325"
+        tools:ignore="MissingConstraints"></Button>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

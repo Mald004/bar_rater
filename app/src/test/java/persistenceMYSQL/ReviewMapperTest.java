@@ -1,4 +1,4 @@
-package persistence;
+package persistenceMYSQL;
 
 import junit.framework.TestCase;
 

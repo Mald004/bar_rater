@@ -34,7 +34,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.zaxxer:HikariCP:4.0.3'  // Add HikariCP dependency
     implementation 'mysql:mysql-connector-java:8.0.26'  // Add MySQL connector dependency
-
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'  // Add JUnit 5 dependency
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'  // Add JUnit 5 test engine dependency

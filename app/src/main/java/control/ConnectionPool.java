@@ -1,6 +1,7 @@
 package control;
 
 
+import android.content.Context;
 import android.util.Log;
 
 import com.zaxxer.hikari.HikariConfig;
@@ -20,7 +21,7 @@ public class ConnectionPool
 
 
 
-    private ConnectionPool() {
+    ConnectionPool(Context applicationContext) {
         String deployed = System.getenv("DEPLOYED");
         if (deployed != null) {
             USER = System.getenv("JDBC_USER");
@@ -66,7 +67,7 @@ public class ConnectionPool
     public static synchronized ConnectionPool getInstance() {
         if (instance == null) {
             Log.d("DEBUG", "Creating new instance of ConnectionPool");
-            instance = new ConnectionPool();
+            instance = new ConnectionPool(USER,PASSWORD,URL);
         } else {
             Log.d("DEBUG", "Returning existing instance of ConnectionPool");
         }
