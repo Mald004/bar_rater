@@ -1,12 +1,14 @@
 package entities;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String name;
     private int age;
     private int id;
     private String password;
 
-    public User(String name, int age, int id) {
+    public User(int id, int age, String name) {
         this.name = name;
         this.age = age;
         this.id = id;
@@ -18,6 +20,7 @@ public class User {
         this.id = id;
         this.password = password;
     }
+
 
     public String getName() {
         return name;

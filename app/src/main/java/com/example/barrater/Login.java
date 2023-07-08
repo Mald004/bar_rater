@@ -14,13 +14,16 @@ import java.util.ArrayList;
 
 import control.LoginConfirmation;
 import control.SQLiteDB;
+import control.SQLiteDB_TestDB;
 import entities.User;
+import persistenceSQLite.UserMapper;
 
 
 public class Login extends AppCompatActivity {
     private LinearLayout parametersFieldOpret;
     private LinearLayout parametersFieldLogin;
-
+    private SQLiteDB db = SQLiteDB.getInstance(Login.this);
+    private SQLiteDB_TestDB dbTest = SQLiteDB_TestDB.getInstance(Login.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,11 @@ public class Login extends AppCompatActivity {
         String password = passwordText.getText().toString();
         int age = Integer.parseInt(ageText.getText().toString());
 
+
+        UserMapper.addUser(dbTest,username,password,age);
+
+        String dbPath = getDatabasePath("bar_rater.db").getAbsolutePath();
+        System.out.println(dbPath);
     }
 
     public void login(View v){
@@ -66,14 +74,16 @@ public class Login extends AppCompatActivity {
         String password = passwordText.getText().toString();
 
 
-        ArrayList<User> users = new ArrayList<>();
+        ArrayList<User> users = UserMapper.getAllUsers(dbTest);
 
         boolean loggedIn = LoginConfirmation.login(users,username,password);
-
+        User user = UserMapper.getUserByName(dbTest,username);
+        System.out.println(user);
         if(loggedIn == true){
             Intent intent = new Intent(this,MainActivity.class);
-
+            intent.putExtra("User",user);
             startActivity(intent);
+            System.out.println("Succes");
         }else{
             System.out.println("Wrong username or password");
         }

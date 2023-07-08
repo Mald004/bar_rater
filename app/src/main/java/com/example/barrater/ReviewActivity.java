@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
+import entities.Review;
+
 public class ReviewActivity extends AppCompatActivity {
 
     @Override
@@ -50,21 +52,7 @@ public class ReviewActivity extends AppCompatActivity {
         int shotPris = Integer.parseInt(shotPrisText.toString());
         int drinkPris = Integer.parseInt(drinkPrisText.toString());
 
-        ArrayList<Integer> ratings = new ArrayList<>();
-        ratings.add(crowded);
-        ratings.add(hyggelig);
-        ratings.add(lokation);
-        ratings.add(plads);
-        ratings.add(musik);
-        ratings.add(aldersGennemsnit);
-        ratings.add(sport);
-        ratings.add(spil);
-        ratings.add(ølVariant);
-        ratings.add(charme);
-        ratings.add(typer);
-        ratings.add(ølPris);
-        ratings.add(shotPris);
-        ratings.add(drinkPris);
+        Review review = new Review(navn,adresse,crowded,hyggelig,lokation,plads,musik,aldersGennemsnit,sport,spil,ølVariant,charme,typer,ølPris,shotPris,drinkPris);
 
 
     }

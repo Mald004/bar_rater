@@ -23,10 +23,10 @@ public class SQLiteDB extends SQLiteOpenHelper {
     private static Map<Context, SQLiteDB> instances = new HashMap<>();
 
     public static final String USER = "user";
-    public static final String REVIEW = "review";
     public static final String AGE = "age";
     public static final String NAME = "name";
     public static final String PASSWORD = "password";
+    public static final String REVIEW = "review";
     public static final String NAVN = "navn";
     public static final String ADDRESSE = "addresse";
     public static final String CROWDED = "crowded";
@@ -61,7 +61,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
     //This is called if the database number changes. It prevents previous users apps from breaking when you change the database design.
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
